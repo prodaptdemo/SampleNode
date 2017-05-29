@@ -1,0 +1,18 @@
+﻿extends layout
+
+block content
+  .row
+    .col-md-4
+      h2 Data from Micro API
+      ul.list-group.apilist
+
+block scripts
+  script.
+    $(function(){
+       $.getJSON('http://192.168.54.161:4001/sampleapp/getAnalysis',null,function(res){
+           $('.apilist').html();
+           $.each(res.lstresult,function(i,v){
+               $('.apilist').append($('<li class="list-group-item"/>').text(v.appName));
+           });
+       });
+    });   

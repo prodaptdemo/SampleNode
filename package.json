@@ -1,0 +1,14 @@
+{
+  "name": "sample-node",
+  "version": "0.0.0",
+  "description": "SampleNode",
+  "main": "app.js",
+  "author": {
+    "name": "mahendran.m"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*"
+  }
+}
