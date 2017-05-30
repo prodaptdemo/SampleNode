@@ -4,8 +4,8 @@ var appsettings = appsettings || {};
     settings.Config = {
         DBConnection: {
             host: '192.168.54.186',
-            user: 'test',
-            password: 'test',
+            user: 'root',
+            password: 'password',
             database: 'microdb'
         }
     };
