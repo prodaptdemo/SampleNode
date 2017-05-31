@@ -3,9 +3,9 @@ var appsettings = appsettings || {};
 (function (settings) {
     settings.Config = {
         DBConnection: {
-            host: '192.168.54.186',
-            user: 'root',
-            password: 'password',
+            host: 'process.env.MYSQL_HOST',
+            user: 'process.env.MYSQL_USER',
+            password: 'process.env.MYSQL_PASS',
             database: 'microdb'
         }
     };
