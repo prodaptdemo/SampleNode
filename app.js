@@ -9,7 +9,8 @@ var http = require('http');
 var path = require('path');
 
 var app = express();
-
+var AWSXRay = require('aws-xray-sdk');
+app.use(AWSXRay.express.openSegment());
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -51,7 +52,7 @@ app.post('/api/addcontact', routes.insertcontact);
 app.get('/api/getcontacts', routes.getcontacts);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
-
+pp.use(AWSXRay.express.closeSegment());
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
