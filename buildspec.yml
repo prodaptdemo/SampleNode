@@ -1,0 +1,14 @@
+version: 1.0.0  
+    phases:
+        install:
+            pre_build:
+                commands:
+                    - npm install
+            build:
+                commands:                    
+            post_build:
+                commands:
+                    - node app.js
+    artifacts:
+        files:
+            /*       
