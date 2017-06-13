@@ -10,7 +10,6 @@
     "express": "3.4.4",
     "jade": "*",
     "stylus": "*",
-    "mysql": "^2.13.0",
-    "aws-xray-sdk" : "1.1.1"
+    "mysql": "^2.13.0"
   }
 }
